@@ -1,6 +1,6 @@
 <h2>Message list</h2>
 
-<button>Create message</button>
+<button (click)="createMessage()">Create message</button>
 
 <table>
 
@@ -19,8 +19,8 @@
       <td>{{message.title}}</td>
       <td>{{message.description}}</td>
       <td>
-        <button>Update</button>
-        <button>Delete</button>
+        <button (click)="updateMessage(message.id)">Update</button>
+        <button (click)="deleteMessage(message.id)">Delete</button>
       </td>
     </tr>
   </tbody>
