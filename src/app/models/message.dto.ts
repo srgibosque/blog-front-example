@@ -1,10 +1,9 @@
 export class MessageDTO{
-  id: number;
+  id!: number;
   title: string;
   description: string;
 
-  constructor(id: number, title: string, description: string) {
-    this.id = id;
+  constructor(title: string, description: string) {
     this.title = title;
     this.description = description;
   }
