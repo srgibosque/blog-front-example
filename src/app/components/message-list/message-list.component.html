@@ -1,1 +1,28 @@
-<p>message-list works!</p>
+<h2>Message list</h2>
+
+<button>Create message</button>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let message of messages">
+      <td>{{message.id}}</td>
+      <td>{{message.title}}</td>
+      <td>{{message.description}}</td>
+      <td>
+        <button>Update</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
