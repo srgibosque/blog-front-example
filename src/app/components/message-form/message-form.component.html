@@ -1,1 +1,29 @@
-<p>message-form works!</p>
+<div>
+  <h1>Message Form</h1>
+  <form [formGroup]="messageForm" (ngSubmit)="saveMessage()">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" [formControl]="title">
+
+      <div *ngIf="title.errors">
+        <div *ngIf="title.errors && isValidForm != null && !isValidForm">
+          <div *ngIf="title.errors.required">Title is required</div>
+          <div *ngIf="title.errors.maxlength">Title cannot be longer than 150 characters</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="description">Title:</label>
+      <input type="text" [formControl]="description">
+
+      <div *ngIf="description.errors">
+        <div *ngIf="description.errors && isValidForm != null && !isValidForm">
+          <div *ngIf="description.errors.required">Description is required</div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+</div>
